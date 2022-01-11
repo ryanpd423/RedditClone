@@ -1,6 +1,6 @@
 # Fullstack React GraphQL Typescript Tutorial
 
-* Continue @ `38:00`
+* Continue @ `46:19`
 
 * Author: `Ben Awad`
 * Source: `YouTube`
@@ -25,6 +25,20 @@
 ### MikroORM
 * Migrations Cmd via CLI: `npx mikro-orm migration:create` 
   * Creates new migration with current schema dif
-  * Successful Cmd Output From Node-1 (`yarn dev`): ![Migration-Run1](README_IMGS/MikroORM-MigrationCMD_Success.png)
-  * Successful Cmd Output From Node-2 (`yarn dev`) ![Migration-Run2](README_IMGS/MikroORM-Successful_CMD-YARN_DEV.png)
-  * Confirm in PGAdmin4 (`postgresql`) ![Confirm-SQL-Worked](README_IMGS/MikroORM-PostgreSUCCESS-Confirm.png)
+* Successful Cmd Output From Node-1 (`yarn dev`): ![Migration-Run1](README_IMGS/MikroORM-MigrationCMD_Success.png)
+* Successful Cmd Output From Node-2 (`yarn dev`) ![Migration-Run2](README_IMGS/MikroORM-Successful_CMD-YARN_DEV.png)
+* Confirm in PGAdmin4 (`postgresql`) ![Confirm-SQL-Worked](README_IMGS/MikroORM-PostgreSUCCESS-Confirm.png)
+* Query Database ![Query-Posts](README_IMGS/MikroORM-Successful_Query.png)
+
+### Express (server) / Apollo-Server-Express / GraphQL / Type-GraphQL
+* `yarn add express apollo-server-express graphql type-graphql`
+* * express = server (middleware)
+* * apollo server express allows to use graphql and create a graphql endpoint very easily and then use type-graphql for our schema - Ben Awad
+* `yarn add -D @types/express` -- have to install the types for express, the others just work with typescript OOTB
+* Start Server: `yarn dev`
+* * Server Output ![Start-Express-Server-via-Yarn-Dev-Cmd](README_IMGS/Express_StartServer_YarnDev.png)
+* **ERROR**: Incompatible Version `Type-GraphQL` - FIX: ![TypeGraphQL-Fix](README_IMGS/TypeGraphQL-IncompatibleVersion-Fix.png)
+* * * `https://stackoverflow.com/questions/69957128/incompatible-versions-of-graphql-and-typegraphql`
+* **ERROR**: Incompatible Version `Apollo-Server-Express` - FIX: ![Apollo-Server-Express-Fix](README_IMGS/Apollo-Server-Express_Incompatible_Version-FIX.png)
+* * * `https://stackoverflow.com/questions/68354656/unhandledpromiserejectionwarning-error-you-must-await-server-start-before`
+* `GraphQL Playground` @ `localhost:4000/graphql` ![graphql-playground-endpoint](README_IMGS/GraphQL-Playground.png)
